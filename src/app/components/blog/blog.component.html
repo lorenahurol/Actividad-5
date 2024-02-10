@@ -1,0 +1,36 @@
+<section>
+    <!-- Formulario -->
+    <div>
+    <!--Capturar los datos-->
+        <div>
+        <label for="titulo">Titulo:</label>
+        <input type="text" id="titulo" placeholder="Introduce el titulo de la noticia" [(ngModel)]="newNoticia.titulo">
+        <!-- NgModel para Two-way data binding -->
+        </div>
+
+        <div>
+        <label for="imagen">Imagen:</label>
+        <input type="url" id="imagen" placeholder="Introduce la url de la imagen" [(ngModel)]="newNoticia.imagen">
+        </div>
+
+        <div>
+        <label for="cuerpo">Texto o cuerpo de la noticia:</label>
+        <input type="text" id="cuerpo" placeholder="Introduce el cuerpo de la noticia" [(ngModel)]="newNoticia.cuerpo">
+        </div>
+
+        <div>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" placeholder="" [(ngModel)]="newNoticia.fecha">
+        </div>
+
+        <!-- Evento de tipo click -->
+        <button (click)="publicar()">Publicar</button>
+
+    </div>
+    <hr>
+    <div [innerHTML]="cargarNoticias()">
+    <!-- Pintar los datos -->
+    
+    </div>
+
+</section>
