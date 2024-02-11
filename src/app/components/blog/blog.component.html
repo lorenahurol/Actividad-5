@@ -1,36 +1,38 @@
 <section>
     <!-- Formulario -->
-    <div>
+    <div class="formulario">
+        <h1>Publica una noticia:</h1>
     <!--Capturar los datos-->
         <div>
-        <label for="titulo">Titulo:</label>
-        <input type="text" id="titulo" placeholder="Introduce el titulo de la noticia" [(ngModel)]="newNoticia.titulo">
+        <label for="title">Titulo:</label>
+        <input type="text" id="title" placeholder="Introduce el titulo de la noticia" required [(ngModel)]="newNoticia.title">
         <!-- NgModel para Two-way data binding -->
         </div>
 
         <div>
-        <label for="imagen">Imagen:</label>
-        <input type="url" id="imagen" placeholder="Introduce la url de la imagen" [(ngModel)]="newNoticia.imagen">
+        <label for="image">Imagen:</label>
+        <input type="url" id="image" placeholder="Introduce la url de la imagen" required [(ngModel)]="newNoticia.url">
         </div>
 
         <div>
-        <label for="cuerpo">Texto o cuerpo de la noticia:</label>
-        <input type="text" id="cuerpo" placeholder="Introduce el cuerpo de la noticia" [(ngModel)]="newNoticia.cuerpo">
+        <label for="content">Texto o cuerpo de la noticia:</label>
+        <input type="text" id="content" placeholder="Introduce el cuerpo de la noticia" required [(ngModel)]="newNoticia.content">
         </div>
 
         <div>
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" placeholder="" [(ngModel)]="newNoticia.fecha">
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" placeholder="" required [(ngModel)]="newNoticia.date">
         </div>
 
         <!-- Evento de tipo click -->
         <button (click)="publicar()">Publicar</button>
 
     </div>
-    <hr>
-    <div [innerHTML]="cargarNoticias()">
-    <!-- Pintar los datos -->
-    
-    </div>
 
+    <div class="noticias">
+        <h1>Noticias:</h1>
+        <!-- Pintar los datos -->
+        <div class="noticias" [innerHTML]="cargarNoticias()">
+        </div>
+    </div>
 </section>
