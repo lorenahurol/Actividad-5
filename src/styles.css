@@ -27,6 +27,31 @@ body {
     padding: 20px;
 }
 
+header nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+header nav p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header nav ul {
+    gap: 30px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    padding: 10px 0;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
 section {
     display: flex;
     justify-content: space-between;
@@ -136,6 +161,12 @@ button {
     margin-bottom: 20px;
 }
 
+footer {
+    text-align: center;
+    color: var(--color-accent);
+
+}
+
 @media(min-width: 800px) {
     .noticia__card {
         flex-direction: row;
@@ -157,6 +188,19 @@ button {
     .noticia__card__content {
         width: 70%;
         max-width: 100%;
+    }
+
+    header nav {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        list-style: none;
     }
 }
 
