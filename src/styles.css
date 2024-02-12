@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* Custom properties */
 :root {
-    --color-fondo: rgba(247, 247, 247, 0.5);
-    --color-fuente: rgb(0, 0, 0, 0.7);
-    --color-accent: rgba(4, 73, 110, 0.9);
-    --border: 2px solid rgba(4, 73, 110, 0.9);
+    --color-fondo: rgba(248, 248, 248, 0.8);
+    --color-fuente: rgba(7, 7, 7, 0.9);
+    --color-accent: rgba(25, 1, 53, 0.8);
+    --border: 2px solid rgba(25, 1, 53, 0.5);
 }
 
 /* Estilos generales */
@@ -14,7 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-fuente);
     text-decoration: none;
 }
 
@@ -68,7 +69,11 @@ h1 {
 .formulario,
 .noticias {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
+}
+
+.noticias {
+    max-width: 100%;
 }
 
 .noticias h1 {
@@ -77,27 +82,31 @@ h1 {
 }
 
 .formulario {
-    background-color: var(--color-accent);
-    color: white;    
+    background:linear-gradient(130deg, rgba(238, 238, 255, 0.6), rgba(124, 124, 204, 0.2));
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02);
+    backdrop-filter: blur(10px);
 }
 
 .formulario h1 {
-    border-bottom: 2px solid white;
+    border-bottom: var(--border);
 }
 
 .formulario__campos {
     padding: 20px;
 }
 
-.formulario div label {
+.formulario div {
     margin: 10px 0;
+    width: 100%;
     display: block;
 }
 
 .formulario div input {
     width: 100%;
+    margin-top: 10px;
     height: 40px;
-    border: none;
+    border: var(--border);
     border-radius: 5px;
     padding: 10px;
 }
@@ -114,7 +123,8 @@ img {
 }
 
 button {
-    background-color: white;
+    background-color: var(--color-accent);
+    color: white;
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
@@ -122,27 +132,35 @@ button {
 }
 
 .noticia__card {
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    max-width: 1240px;
-    background-color: white;
-    margin: 30px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
     box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02);
 }
 
 .noticia__card__content {
     margin: 10px;
-    padding: 32px 40px;
+    padding: 24px 10px;
     
 }
 
 .noticia__card__img--box {
-    margin-bottom: 10px;
+    min-width: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .noticia__card__img {
     width: 100%;
-    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
 }
 
 .noticia__card__content--date {
@@ -168,27 +186,37 @@ footer {
 }
 
 @media(min-width: 800px) {
+
+    .formulario {
+        padding: 20px;
+        max-width: 50%;
+    }
+
+        .formulario .date {
+            max-width: 40%;
+        }
+
+    .noticias {
+        max-width: 1240px;
+    }
+
     .noticia__card {
         flex-direction: row;
         gap: 20px;
         align-items: center;
 
     }
+        .noticia__card__img--box {
+            min-width: 400px;
+            max-width: 400px;
+            height: 400px;
+        }
 
-    .noticia__card__img--box {
-        width: 30%;
-        margin: 20px;
-    }
-
-    .noticia__card__img {
-        width: 100%;
-        min-width: 400px;
-    }
-
-    .noticia__card__content {
-        width: 70%;
-        max-width: 100%;
-    }
+        .noticia__card__content {
+            margin: 10px;
+            padding: 32px  40px;
+        
+        }
 
     header nav {
         justify-content: space-between;
