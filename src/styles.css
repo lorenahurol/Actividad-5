@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Custom properties */
+:root {
+    --color-fondo: rgba(247, 247, 247, 0.5);
+    --color-fuente: rgb(0, 0, 0, 0.7);
+    --color-accent: rgba(4, 73, 110, 0.9);
+    --border: 2px solid rgba(4, 73, 110, 0.9);
+}
+
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-fondo);
+    padding: 20px;
+}
+
 section {
     display: flex;
     justify-content: space-between;
@@ -5,24 +34,129 @@ section {
     gap: 1.5em;
 }
 
+h1 {
+    font-size: 28px;
+    padding: 20px;
+    
+}
+
 .formulario,
 .noticias {
     width: 100%;
-    background-color: rgba(242, 254, 255, 0.5);
     padding: 20px;
 }
 
+.noticias h1 {
+    border-bottom: var(--border);
 
-.noticia-item {
-    border: 1px solid #35068b;
-    border-radius: 8px;
-    width: 80%;
+}
+
+.formulario {
+    background-color: var(--color-accent);
+    color: white;    
+}
+
+.formulario h1 {
+    border-bottom: 2px solid white;
+}
+
+.formulario__campos {
     padding: 20px;
-    margin: 20px;
+}
+
+.formulario div label {
+    margin: 10px 0;
+    display: block;
+}
+
+.formulario div input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+a {
+    cursor: pointer;
+    color: var(--color-accent);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.noticia__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    background-color: white;
+    margin: 30px;
+    box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02);
+}
+
+.noticia__card__content {
+    margin: 10px;
+    padding: 32px 40px;
+    
+}
+
+.noticia__card__img--box {
+    margin-bottom: 10px;
+}
+
+.noticia__card__img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.noticia__card__content--date {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.noticia__card__content--title {
+    margin-bottom: 20px;
+}
+
+.noticia__card__content--text {
+    margin-bottom: 20px;
 }
 
 @media(min-width: 800px) {
-    section {
+    .noticia__card {
         flex-direction: row;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    .noticia__card__img--box {
+        width: 30%;
+        margin: 20px;
+    }
+
+    .noticia__card__img {
+        width: 100%;
+        min-width: 400px;
+    }
+
+    .noticia__card__content {
+        width: 70%;
+        max-width: 100%;
     }
 }
+

@@ -3,29 +3,31 @@
     <div class="formulario">
         <h1>Publica una noticia:</h1>
     <!--Capturar los datos-->
-        <div>
-        <label for="title">Titulo:</label>
-        <input type="text" id="title" placeholder="Introduce el titulo de la noticia" required [(ngModel)]="newNoticia.title">
-        <!-- NgModel para Two-way data binding -->
-        </div>
+        <div class="formulario__campos">
+            <div>
+            <label for="title">Titulo:</label>
+            <input type="text" id="title" placeholder="Introduce el titulo de la noticia" required [(ngModel)]="newNoticia.title">
+            <!-- NgModel para Two-way data binding -->
+            </div>
 
-        <div>
-        <label for="image">Imagen:</label>
-        <input type="url" id="image" placeholder="Introduce la url de la imagen" required [(ngModel)]="newNoticia.url">
-        </div>
+            <div>
+            <label for="image">Imagen:</label>
+            <input type="url" id="image" placeholder="Introduce la url de la imagen" required [(ngModel)]="newNoticia.url">
+            </div>
 
-        <div>
-        <label for="content">Texto o cuerpo de la noticia:</label>
-        <input type="text" id="content" placeholder="Introduce el cuerpo de la noticia" required [(ngModel)]="newNoticia.content">
-        </div>
+            <div>
+            <label for="content">Texto o cuerpo de la noticia:</label>
+            <input type="text" id="content" placeholder="Introduce el cuerpo de la noticia" required [(ngModel)]="newNoticia.content">
+            </div>
 
-        <div>
-        <label for="date">Fecha:</label>
-        <input type="date" id="date" placeholder="" required [(ngModel)]="newNoticia.date">
-        </div>
+            <div>
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" placeholder="" required [(ngModel)]="newNoticia.date">
+            </div>
 
-        <!-- Evento de tipo click -->
-        <button (click)="publicar()">Publicar</button>
+            <!-- Evento de tipo click -->
+            <button (click)="publicar()">Publicar</button>
+        </div>
 
     </div>
 
