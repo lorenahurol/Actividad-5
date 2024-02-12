@@ -68,9 +68,6 @@ export class BlogComponent {
         <span class="noticia__card__content--date">${noticia.date}</span>
         <h2 class="noticia__card__content--title">${noticia.title}</h2>
         <p class="noticia__card__content--text">${noticia.content}</p>
-        <div class="noticia__card__content--button">
-          <a href="#">Leer más</a>
-        </div>
       </div>
       </article>
       `
